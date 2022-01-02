@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess';
 //import adapter from '@sveltejs/adapter-netlify';
-import adapter from '@sveltejs/adapter-vercel';
+import vercel from '@sveltejs/adapter-vercel';
 import { mdsvex } from 'mdsvex';
 import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
@@ -50,7 +50,7 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		adapter: adapter({
+		adapter: vercel({
 			split: false
 		})
 	}
